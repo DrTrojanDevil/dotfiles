@@ -1,0 +1,24 @@
+# don't put duplicate lines or lines starting with space in the history.
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="ll:ls:pwd"
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export LOG_LEVEL=3
+export NVM_DIR="$HOME/.nvm"
+export EDITOR='nvim'
+export PATH="$PATH:/Users/aaronwalker/.local/bin"
+# Alias definitions.
+
+files_to_source=(
+	~/.bash_aliases
+	~/.bash-aws-cli-utils.sh
+	~/.bash-vars.sh
+	~/.bash-init-applicaitons.sh
+)
+
+for file in "${files_to_source[@]}"; do
+	if [ -f "$file" ]; then
+		. "$file"
+	fi
+done
