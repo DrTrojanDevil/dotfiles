@@ -7,7 +7,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export LOG_LEVEL=3
 export NVM_DIR="$HOME/.nvm"
 export EDITOR='nvim'
-export PATH="$PATH:/Users/aaronwalker/.local/bin"
+export PATH="$PATH:/Users/$(whoami)/.local/bin"
 # Alias definitions.
 
 files_to_source=(
