@@ -1,9 +1,7 @@
-#!/bin/bash
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-# sudo apt install ripgrep
-echo 'information wants to be free'
+echo "this is nix"
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
-echo 'Im a mac'
+echo "this is mac"
 {{ end -}}
